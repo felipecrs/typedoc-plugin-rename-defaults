@@ -1,0 +1,33 @@
+{
+  "name": "typedoc-plugin-rename-defaults",
+  "version": "0.0.0-development",
+  "description": "A TypeDoc plugin that renames the `default` exports to their original name",
+  "main": "dist/index.js",
+  "files": [],
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipecrs/typedoc-plugin-rename-defaults.git"
+  },
+  "keywords": [
+    "typedoc",
+    "plugin",
+    "typedocplugin"
+  ],
+  "author": "Felipe Santos (https://github.com/felipecrs)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/felipecrs/typedoc-plugin-rename-defaults/issues"
+  },
+  "homepage": "https://github.com/felipecrs/typedoc-plugin-rename-defaults#readme",
+  "peerDependencies": {
+    "typedoc": "0.20.x"
+  },
+  "devDependencies": {
+    "typedoc": "^0.20.29",
+    "typescript": "^4.2.0"
+  }
+}
