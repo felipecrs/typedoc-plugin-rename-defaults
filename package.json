@@ -16,7 +16,8 @@
   "keywords": [
     "typedoc",
     "plugin",
-    "typedocplugin"
+    "typedocplugin",
+    "typedoc-plugin"
   ],
   "author": "Felipe Santos (https://github.com/felipecrs)",
   "license": "MIT",
