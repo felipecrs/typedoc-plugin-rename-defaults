@@ -7,7 +7,8 @@
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test:manual": "typedoc --readme none test/index.ts && serve docs",
+    "test:manual": "npm run build && typedoc --readme none test/ && serve docs",
+    "test:manual-no-plugin": "npm run build && typedoc --readme none --plugin none test/ && serve docs",
     "prepack": "npm run build"
   },
   "repository": {
