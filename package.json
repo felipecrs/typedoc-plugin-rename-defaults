@@ -7,8 +7,8 @@
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test:manual": "npm run build && typedoc --readme none test/ && serve docs",
-    "test:manual-no-plugin": "npm run build && typedoc --readme none --plugin none test/ && serve docs",
+    "test:manual": "npm run build && typedoc --readme none --entryPointStrategy expand test/ && serve docs",
+    "test:manual-no-plugin": "npm run build && typedoc --readme none --entryPointStrategy expand --plugin none test/ && serve docs",
     "prepack": "npm run build"
   },
   "repository": {
@@ -28,11 +28,11 @@
   },
   "homepage": "https://github.com/felipecrs/typedoc-plugin-rename-defaults#readme",
   "peerDependencies": {
-    "typedoc": "0.21.x"
+    "typedoc": "0.22.x"
   },
   "devDependencies": {
     "serve": "^12.0.0",
-    "typedoc": "^0.21.5",
+    "typedoc": "^0.22.0",
     "typedoc-plugin-rename-defaults": ".",
     "typescript": "^4.3.5"
   }

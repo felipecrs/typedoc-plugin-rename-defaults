@@ -1,6 +1,6 @@
-import { Application } from "typedoc/dist/lib/application";
-import { Converter, Context } from "typedoc/dist/lib/converter";
-import { Reflection } from "typedoc/dist/lib/models/reflections";
+import { Application } from "typedoc";
+import { Converter, Context } from "typedoc";
+import { Reflection } from "typedoc";
 
 export function load(app: Readonly<Application>) {
   app.converter.on(
