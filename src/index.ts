@@ -3,15 +3,15 @@ import { Application, Context, Converter, Reflection } from "typedoc";
 export function load(app: Readonly<Application>) {
   app.converter.on(
     Converter.EVENT_CREATE_DECLARATION,
-    (_context: Context, reflection: Reflection, node?: any) => {
+    (_context: Context, reflection: Reflection, _node?: any) => {
       if (
-        !node ||
-        !node.name ||
+        !reflection.parent ||
+        !reflection.parent.name ||
         (reflection.name !== "default" && reflection.name !== "export=")
       )
         return;
 
-      reflection.name = node.name.getText();
+      reflection.name = reflection.parent.name;
     }
   );
 }
