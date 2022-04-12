@@ -31,7 +31,7 @@
     "typedoc": "0.22.x"
   },
   "devDependencies": {
-    "serve": "^12.0.0",
+    "serve": "^13.0.2",
     "typedoc": "^0.22.0",
     "typedoc-plugin-rename-defaults": ".",
     "typescript": "^4.3.5"
