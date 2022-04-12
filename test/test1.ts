@@ -1,5 +1,5 @@
 function test1(param: string) {
-  return
+  return;
 }
 
-export default test1
+export default test1;
