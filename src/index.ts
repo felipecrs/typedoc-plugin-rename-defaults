@@ -11,7 +11,11 @@ export function load(app: Readonly<Application>) {
       )
         return;
 
-      reflection.name = reflection.parent.name;
+      // Removes the folder name
+      const name = reflection.parent.name.split("/").pop();
+      if (name) {
+        reflection.name = name;
+      }
     }
   );
 }
