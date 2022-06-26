@@ -35,5 +35,9 @@
     "typedoc": "^0.22.0",
     "typedoc-plugin-rename-defaults": ".",
     "typescript": "^4.3.5"
+  },
+  "volta": {
+    "node": "16.15.1",
+    "npm": "8.13.1"
   }
 }
