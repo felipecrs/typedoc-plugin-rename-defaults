@@ -14,7 +14,8 @@ export function load(app: Readonly<Application>) {
       // Removes the folder name
       const name = reflection.parent.name.split("/").pop();
       if (name) {
-        reflection.name = name;
+        // Example: User.entity becomes just User
+        reflection.name = name.split(".")[0];
       }
     }
   );
