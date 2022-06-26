@@ -14,7 +14,11 @@ export function load(app: Readonly<Application>) {
       // Removes the folder name
       const name = reflection.parent.name.split("/").pop();
       if (name) {
-        reflection.name = name;
+        if (name.includes(".")) {
+          reflection.name = name.split(".")[0];
+        } else {
+          reflection.name = name;
+        }
       }
     }
   );
