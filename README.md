@@ -16,7 +16,7 @@ Just install the plugin and TypeDoc will load it automatically.
 npm install --save-dev typedoc-plugin-rename-defaults
 ```
 
-For TypeDoc 0.22.x, you will need to add `--entrypointStrategy expand` to the `typedoc` command. Example:
+For TypeDoc 0.22.x and up, you will need to add `--entrypointStrategy expand` to the `typedoc` command. Example:
 
 ```jsonc
 // package.json
