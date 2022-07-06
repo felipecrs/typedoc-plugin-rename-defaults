@@ -1,13 +1,9 @@
-import { Application, Context, Converter, Reflection } from "typedoc";
-
-interface CustomReflection extends Reflection {
-  escapedName: string
-}
+import { Application, Context, Converter, DeclarationReflection, Reflection } from "typedoc";
 
 export function load(app: Readonly<Application>) {
   app.converter.on(
     Converter.EVENT_CREATE_DECLARATION,
-    (_context: Context, reflection: CustomReflection) => {
+    (context: Context, reflection: DeclarationReflection) => {
       if (reflection.name !== "default" && reflection.name !== "export=") {
         return;
       }
