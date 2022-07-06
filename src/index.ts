@@ -1,4 +1,10 @@
-import { Application, Context, Converter, DeclarationReflection, Reflection } from "typedoc";
+import {
+  Application,
+  Context,
+  Converter,
+  DeclarationReflection,
+  Reflection,
+} from "typedoc";
 
 export function load(app: Readonly<Application>) {
   app.converter.on(
@@ -8,12 +14,23 @@ export function load(app: Readonly<Application>) {
         return;
       }
 
+      // reflection.escapedName is the cheapest option
       if (reflection.escapedName && reflection.escapedName !== "default") {
-        reflection.name = reflection.escapedName
+        reflection.name = reflection.escapedName;
         return;
       }
 
-      // If a name for the reflection cannot be found, fallback to the file name
+      // if that does not work, try harder
+      const symbol = context.project.getSymbolFromReflection(reflection);
+      if (symbol) {
+        const node: any = symbol.valueDeclaration;
+        if (node && node.name) {
+          reflection.name = node.name.getText();
+          return;
+        }
+      }
+
+      // Finally, fallback to the file name
       if (reflection.parent && reflection.parent.name) {
         // Removes the folder name
         const name = reflection.parent.name.split("/").pop();
