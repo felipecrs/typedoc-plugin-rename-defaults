@@ -21,8 +21,8 @@ export function load(app: Readonly<Application>) {
 
       // if that does not work, try harder
       const symbol = context.project.getSymbolFromReflection(reflection);
-      if (symbol) {
-        const node: any = symbol.valueDeclaration;
+      if (symbol && symbol.declarations && symbol.declarations[0]) {
+        const node: any = symbol.declarations[0];
         if (node && node.name) {
           reflection.name = node.name.getText();
           return;
