@@ -1,5 +1,5 @@
-function test2(param: string) {
+function test2Function(param: string) {
   return;
 }
 
-export = test2;
+export = test2Function;
