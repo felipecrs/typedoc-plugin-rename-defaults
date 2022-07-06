@@ -3,7 +3,6 @@ import {
   Context,
   Converter,
   DeclarationReflection,
-  Reflection,
 } from "typedoc";
 
 export function load(app: Readonly<Application>) {
