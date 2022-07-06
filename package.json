@@ -2,14 +2,14 @@
   "name": "typedoc-plugin-rename-defaults",
   "version": "0.6.1",
   "description": "A TypeDoc plugin that renames the `default` exports to their original name",
-  "main": "dist/src/index.js",
+  "main": "dist/index.js",
   "files": [],
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test:manual": "npm run build && typedoc --readme none --entryPointStrategy expand test/ && serve docs",
-    "test:manual-no-plugin": "npm run build && typedoc --readme none --entryPointStrategy expand --plugin none test/ && serve docs",
-    "prepack": "npm run build"
+    "test:manual": "npm run build && typedoc && serve docs",
+    "test:manual-no-plugin": "npm run build && typedoc && serve docs",
+    "prepack": "rm -rf dist && npm run build"
   },
   "repository": {
     "type": "git",
