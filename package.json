@@ -28,11 +28,11 @@
   },
   "homepage": "https://github.com/felipecrs/typedoc-plugin-rename-defaults#readme",
   "peerDependencies": {
-    "typedoc": "0.22.x || 0.23.x || 0.24.x"
+    "typedoc": "0.22.x || 0.23.x || 0.24.x || 0.25.x"
   },
   "devDependencies": {
     "http-server": "^14.1.1",
-    "typedoc": "^0.24.1",
+    "typedoc": "^0.25.0",
     "typedoc-plugin-rename-defaults": ".",
     "typescript": "^5.0.4"
   },
