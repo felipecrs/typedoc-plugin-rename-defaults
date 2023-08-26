@@ -1,6 +1,6 @@
 {
   "name": "typedoc-plugin-rename-defaults",
-  "version": "0.6.5",
+  "version": "0.6.6",
   "description": "A TypeDoc plugin that renames the `default` exports to their original name",
   "main": "dist/index.js",
   "files": [],
