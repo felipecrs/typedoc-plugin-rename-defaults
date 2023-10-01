@@ -26,6 +26,19 @@ For TypeDoc 0.22 and up, you will need to add `--entrypointStrategy expand` to t
 }
 ```
 
+For Typedoc 0.24.0 and up, you will need to explicitely load the plugin with the `--plugin` flag, for example:
+
+```jsonc
+// package.json
+
+{
+    "scripts": {
+        "build-docs": "typedoc --entryPointStrategy expand src/ --plugin typedoc-plugin-rename-defaults"
+    }
+}
+```
+
+
 ## Credits
 
 The initial implementation of this plugin was proposed by [@Gerrit0](https://github.com/Gerrit0) at [typedoc#1521](https://github.com/TypeStrong/typedoc/issues/1521#issuecomment-791971444).
