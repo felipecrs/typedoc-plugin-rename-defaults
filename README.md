@@ -8,36 +8,23 @@ Since TypeDoc 0.20, the `default` exports fields do not get documented with thei
 
 ## Usage
 
-Just install the plugin and TypeDoc will load it automatically.
+Install the plugin:
 
 ```console
 npm install --save-dev typedoc-plugin-rename-defaults
 ```
 
-For TypeDoc 0.22 and up, you will need to add `--entrypointStrategy expand` to the `typedoc` command. Example:
+Then, add `--plugin typedoc-plugin-rename-defaults` (required since TypeDoc 0.24) and `--entrypointStrategy expand` (required since TypeDoc 0.22) to the `typedoc` command. Example:
 
 ```jsonc
 // package.json
 
 {
     "scripts": {
-        "build-docs": "typedoc --entryPointStrategy expand src/"
+        "build-docs": "typedoc --plugin typedoc-plugin-rename-defaults --entryPointStrategy expand src/"
     }
 }
 ```
-
-For Typedoc 0.24.0 and up, you will need to explicitely load the plugin with the `--plugin` flag, for example:
-
-```jsonc
-// package.json
-
-{
-    "scripts": {
-        "build-docs": "typedoc --entryPointStrategy expand src/ --plugin typedoc-plugin-rename-defaults"
-    }
-}
-```
-
 
 ## Credits
 
