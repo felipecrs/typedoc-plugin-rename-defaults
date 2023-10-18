@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test:manual": "npm run build && typedoc && http-server docs -c-1 --silent -o",
+    "test:manual": "npm run build && typedoc --plugin ./dist/index.js && http-server docs -c-1 --silent -o",
     "test:manual-no-plugin": "npm run build && typedoc && http-server docs -c-1 --silent -o",
     "prepack": "rm -rf dist && npm run build"
   },
