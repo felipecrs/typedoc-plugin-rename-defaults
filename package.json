@@ -8,8 +8,7 @@
     "index.js"
   ],
   "scripts": {
-    "dev": "cd test && typedoc && serve docs",
-    "format": "prettier -w ."
+    "dev": "cd test && typedoc && serve docs"
   },
   "repository": "github:felipecrs/typedoc-plugin-rename-defaults",
   "keywords": [
@@ -26,7 +25,6 @@
     "typedoc": "0.22.x || 0.23.x || 0.24.x || 0.25.x"
   },
   "devDependencies": {
-    "prettier": "^3.0.3",
     "serve": "^14.2.1",
     "typedoc": "^0.25.2",
     "typescript": "^5.2.2"

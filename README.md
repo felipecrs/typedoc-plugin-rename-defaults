@@ -20,9 +20,9 @@ Then, add `--plugin typedoc-plugin-rename-defaults` (required since TypeDoc 0.24
 // package.json
 
 {
-    "scripts": {
-        "build-docs": "typedoc --plugin typedoc-plugin-rename-defaults --entryPointStrategy expand src/"
-    }
+  "scripts": {
+    "build-docs": "typedoc --plugin typedoc-plugin-rename-defaults --entryPointStrategy expand src/"
+  }
 }
 ```
 
