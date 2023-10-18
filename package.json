@@ -19,7 +19,7 @@
     "index.js"
   ],
   "scripts": {
-    "dev": "cd test && typedoc && serve docs"
+    "dev": "cd test && typedoc && serve --no-request-logging docs"
   },
   "devDependencies": {
     "serve": "^14.2.1",
