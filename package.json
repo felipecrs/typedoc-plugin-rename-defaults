@@ -1,8 +1,19 @@
 {
   "name": "typedoc-plugin-rename-defaults",
   "version": "0.6.7",
-  "type": "module",
   "description": "A TypeDoc plugin that renames the `default` exports to their original name",
+  "keywords": [
+    "typedoc",
+    "plugin",
+    "typedocplugin",
+    "typedoc-plugin"
+  ],
+  "homepage": "https://github.com/felipecrs/typedoc-plugin-rename-defaults#readme",
+  "bugs": "https://github.com/felipecrs/typedoc-plugin-rename-defaults/issues",
+  "repository": "github:felipecrs/typedoc-plugin-rename-defaults",
+  "license": "MIT",
+  "author": "Felipe Santos (https://github.com/felipecrs)",
+  "type": "module",
   "exports": "./index.js",
   "files": [
     "index.js"
@@ -10,23 +21,12 @@
   "scripts": {
     "dev": "cd test && typedoc && serve docs"
   },
-  "repository": "github:felipecrs/typedoc-plugin-rename-defaults",
-  "keywords": [
-    "typedoc",
-    "plugin",
-    "typedocplugin",
-    "typedoc-plugin"
-  ],
-  "author": "Felipe Santos (https://github.com/felipecrs)",
-  "license": "MIT",
-  "bugs": "https://github.com/felipecrs/typedoc-plugin-rename-defaults/issues",
-  "homepage": "https://github.com/felipecrs/typedoc-plugin-rename-defaults#readme",
-  "peerDependencies": {
-    "typedoc": "0.22.x || 0.23.x || 0.24.x || 0.25.x"
-  },
   "devDependencies": {
     "serve": "^14.2.1",
     "typedoc": "^0.25.2",
     "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "typedoc": "0.22.x || 0.23.x || 0.24.x || 0.25.x"
   }
 }
