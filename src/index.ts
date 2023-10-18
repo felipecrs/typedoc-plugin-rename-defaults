@@ -14,7 +14,7 @@ export function load(app: Readonly<Application>) {
       }
 
       // reflection.escapedName is the cheapest option
-      if (reflection.escapedName && reflection.escapedName !== "default") {
+      if (reflection.escapedName && reflection.escapedName !== "default" && reflection.name !== "export=") {
         reflection.name = reflection.escapedName;
         return;
       }
