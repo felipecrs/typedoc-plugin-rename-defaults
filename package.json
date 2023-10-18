@@ -28,5 +28,9 @@
   },
   "peerDependencies": {
     "typedoc": "0.22.x || 0.23.x || 0.24.x || 0.25.x"
+  },
+  "volta": {
+    "node": "18.18.2",
+    "npm": "10.2.1"
   }
 }
