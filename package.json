@@ -1,43 +1,36 @@
 {
   "name": "typedoc-plugin-rename-defaults",
-  "version": "0.6.6",
+  "version": "0.6.7",
   "description": "A TypeDoc plugin that renames the `default` exports to their original name",
-  "main": "dist/index.js",
-  "files": [],
-  "scripts": {
-    "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "test:manual": "npm run build && typedoc --plugin ./dist/index.js && http-server docs -c-1 --silent -o",
-    "test:manual-no-plugin": "npm run build && typedoc && http-server docs -c-1 --silent -o",
-    "prepack": "rm -rf dist && npm run build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/felipecrs/typedoc-plugin-rename-defaults.git"
-  },
   "keywords": [
     "typedoc",
     "plugin",
     "typedocplugin",
     "typedoc-plugin"
   ],
-  "author": "Felipe Santos (https://github.com/felipecrs)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/felipecrs/typedoc-plugin-rename-defaults/issues"
-  },
   "homepage": "https://github.com/felipecrs/typedoc-plugin-rename-defaults#readme",
+  "bugs": "https://github.com/felipecrs/typedoc-plugin-rename-defaults/issues",
+  "repository": "github:felipecrs/typedoc-plugin-rename-defaults",
+  "license": "MIT",
+  "author": "Felipe Santos (https://github.com/felipecrs)",
+  "type": "module",
+  "exports": "./index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "dev": "cd test && typedoc && serve --no-request-logging docs"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1",
+    "typedoc": "^0.25.2",
+    "typescript": "^5.2.2"
+  },
   "peerDependencies": {
     "typedoc": "0.22.x || 0.23.x || 0.24.x || 0.25.x"
   },
-  "devDependencies": {
-    "http-server": "^14.1.1",
-    "typedoc": "^0.25.0",
-    "typedoc-plugin-rename-defaults": ".",
-    "typescript": "^5.0.4"
-  },
   "volta": {
-    "node": "18.17.1",
-    "npm": "9.8.1"
+    "node": "18.18.2",
+    "npm": "10.2.1"
   }
 }

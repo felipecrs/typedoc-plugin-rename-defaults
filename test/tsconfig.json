@@ -1,0 +1,8 @@
+{
+  "exclude": ["docs"],
+  "typedocOptions": {
+    "entryPointStrategy": "expand",
+    "entryPoints": ["."],
+    "plugin": ["../index.js"]
+  }
+}
