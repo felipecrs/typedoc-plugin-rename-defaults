@@ -33,6 +33,11 @@ export function load(app) {
         return;
       }
     }
+    const nameTag = symbol.getJsDocTags().find(x => x.name === "name")
+    if (nameTag?.text) {
+      reflection.name = nameTag.text[0].text
+      return
+    }
 
     // Finally, fallback to the file name
     if (reflection.parent && reflection.parent.name) {
