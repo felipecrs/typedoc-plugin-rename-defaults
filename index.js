@@ -13,10 +13,14 @@ export function load(app) {
       return;
     }
 
-    // First check if there's a JSDoc /** @name myVarName */ tag. If so, use the
-    // first one. There CAN be more than one.
+    const symbol = context.project.getSymbolFromReflection(reflection);
+    
+    // First thing: if there's a JSDoc /** @name myVarName */ tag, use the first one.
+    console.debug(symbol.getJsDocTags())
     const nameTag = symbol.getJsDocTags().find(x => x.name === "name")
     if (nameTag?.text) {
+      console.debug(nameTag)
+      // Use the first value. No idea what the rest are.
       reflection.name = nameTag.text[0].text
       return
     }
@@ -32,7 +36,6 @@ export function load(app) {
     }
 
     // if that does not work, try harder
-    const symbol = context.project.getSymbolFromReflection(reflection);
     if (symbol && symbol.declarations && symbol.declarations[0]) {
       /** @type {any} */
       const node = symbol.declarations[0];
