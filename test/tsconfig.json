@@ -3,6 +3,7 @@
   "typedocOptions": {
     "entryPointStrategy": "expand",
     "entryPoints": ["."],
+    "readme": "none",
     "plugin": ["../index.js"]
   }
 }
