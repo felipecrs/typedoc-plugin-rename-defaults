@@ -16,10 +16,10 @@ export function load(app) {
     const symbol = context.project.getSymbolFromReflection(reflection);
     
     // First thing: if there's a JSDoc /** @name myVarName */ tag, use the first one.
-    console.debug(symbol.getJsDocTags())
+    // console.debug(symbol.getJsDocTags())
     const nameTag = symbol.getJsDocTags().find(x => x.name === "name")
     if (nameTag?.text) {
-      console.debug(nameTag)
+      // console.debug(nameTag)
       // Use the first value. No idea what the rest are.
       reflection.name = nameTag.text[0].text
       return
