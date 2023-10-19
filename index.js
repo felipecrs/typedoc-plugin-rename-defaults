@@ -37,10 +37,9 @@ export function load(app) {
     // Finally, fallback to the file name
     if (reflection.parent && reflection.parent.name) {
       // Removes the folder name
-      const name = reflection.parent.name.split("/").pop();
+      const name = reflection.parent.getFriendlyFullName().split("/").pop();
       if (name) {
-        // Example: User.entity becomes just User
-        reflection.name = name.split(".")[0];
+        reflection.name = name;
       }
     }
   }
