@@ -13,6 +13,14 @@ export function load(app) {
       return;
     }
 
+    // First check if there's a JSDoc /** @name myVarName */ tag. If so, use the
+    // first one. There CAN be more than one.
+    const nameTag = symbol.getJsDocTags().find(x => x.name === "name")
+    if (nameTag?.text) {
+      reflection.name = nameTag.text[0].text
+      return
+    }
+
     // reflection.escapedName is the cheapest option
     if (
       reflection.escapedName &&
@@ -32,11 +40,6 @@ export function load(app) {
         reflection.name = node.name.getText();
         return;
       }
-    }
-    const nameTag = symbol.getJsDocTags().find(x => x.name === "name")
-    if (nameTag?.text) {
-      reflection.name = nameTag.text[0].text
-      return
     }
 
     // Finally, fallback to the file name
