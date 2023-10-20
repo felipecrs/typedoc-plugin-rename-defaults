@@ -1,2 +1,4 @@
-/** @module test9.hi.hi.hi */
-export default "hihihihi"
+/**
+ * @module test9.TEST.test
+ */
+export default "some text"
