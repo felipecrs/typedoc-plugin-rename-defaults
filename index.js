@@ -1,5 +1,5 @@
 import { Converter } from "typedoc";
-import camelCase from 'camelcase';
+import camelCase from "camelcase";
 
 /**
  * @param {Readonly<import('typedoc').Application>} app
@@ -37,13 +37,12 @@ export function load(app) {
 
     // Finally, fallback to the camel cased module (file) name
     if (reflection.parent && reflection.parent.name) {
-      let name = reflection.parent.getFriendlyFullName()
+      let name = reflection.parent.getFriendlyFullName();
       if (name) {
-        // Removes the folder name if there is any
+        // Remove the folder name if there is any
         name = name.split("/").pop();
 
-        // Camel cases the name
-        name = camelCase(name, {preserveConsecutiveUppercase: true})
+        name = camelCase(name, { preserveConsecutiveUppercase: true });
 
         reflection.name = name;
       }
