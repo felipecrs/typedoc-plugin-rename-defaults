@@ -1,10 +1,10 @@
-import { Converter } from "typedoc";
-import camelCase from "camelcase";
+const { Converter } = require("typedoc");
+const camelCase = require("camelcase");
 
 /**
  * @param {Readonly<import('typedoc').Application>} app
  */
-export function load(app) {
+function load(app) {
   /**
    * @param {import('typedoc').Context} context
    * @param {import('typedoc').DeclarationReflection} reflection
@@ -51,3 +51,5 @@ export function load(app) {
 
   app.converter.on(Converter.EVENT_CREATE_DECLARATION, handleCreateDeclaration);
 }
+
+module.exports = { load };

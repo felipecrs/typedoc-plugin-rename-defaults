@@ -13,8 +13,7 @@
   "repository": "github:felipecrs/typedoc-plugin-rename-defaults",
   "license": "MIT",
   "author": "Felipe Santos (https://github.com/felipecrs)",
-  "type": "module",
-  "exports": "./index.js",
+  "main": "./index.js",
   "files": [
     "index.js"
   ],
@@ -34,6 +33,6 @@
     "npm": "10.2.1"
   },
   "dependencies": {
-    "camelcase": "^8.0.0"
+    "camelcase": "^6.3.0"
   }
 }
