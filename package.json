@@ -22,16 +22,16 @@
     "dev": "cd test && typedoc && serve --no-request-logging docs"
   },
   "devDependencies": {
-    "serve": "^14.2.1",
-    "typedoc": "^0.25.2",
-    "typescript": "^5.2.2"
+    "serve": "^14.2.3",
+    "typedoc": "^0.26.0",
+    "typescript": "^5.5.2"
   },
   "peerDependencies": {
-    "typedoc": "0.22.x || 0.23.x || 0.24.x || 0.25.x"
+    "typedoc": ">=0.22.x <0.27.x"
   },
   "volta": {
-    "node": "18.18.2",
-    "npm": "10.2.1"
+    "node": "20.15.0",
+    "npm": "10.8.1"
   },
   "dependencies": {
     "camelcase": "^8.0.0"
