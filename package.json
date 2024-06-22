@@ -10,7 +10,10 @@
   ],
   "homepage": "https://github.com/felipecrs/typedoc-plugin-rename-defaults#readme",
   "bugs": "https://github.com/felipecrs/typedoc-plugin-rename-defaults/issues",
-  "repository": "github:felipecrs/typedoc-plugin-rename-defaults",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipecrs/typedoc-plugin-rename-defaults.git"
+  },
   "license": "MIT",
   "author": "Felipe Santos (https://github.com/felipecrs)",
   "type": "module",
