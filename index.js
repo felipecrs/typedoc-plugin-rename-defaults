@@ -25,7 +25,9 @@ export function load(app) {
     }
 
     // if that does not work, try harder
-    const symbol = context.project.getSymbolFromReflection(reflection);
+    const symbol = context.getSymbolFromReflection
+      ? context.getSymbolFromReflection(reflection)
+      : context.project.getSymbolIdFromReflection(reflection); // TypeDoc <0.28.x
     if (symbol && symbol.declarations && symbol.declarations[0]) {
       /** @type {any} */
       const node = symbol.declarations[0];

@@ -26,11 +26,11 @@
   },
   "devDependencies": {
     "serve": "^14.2.4",
-    "typedoc": "^0.27.0",
-    "typescript": "^5.7.2"
+    "typedoc": "^0.28.0-beta.1",
+    "typescript": "^5.7.3"
   },
   "peerDependencies": {
-    "typedoc": ">=0.22.x <0.28.x"
+    "typedoc": ">=0.22.x <0.29.x"
   },
   "volta": {
     "node": "22.11.0",
